@@ -1,6 +1,6 @@
-# House Prices — Model Comparison
+# Housing Prices — Model Comparison
 
-This project benchmarks linear and tree-based models on the Ames Housing dataset.
+This project benchmarks linear and tree-based models on the Ames, Iowa Housing dataset.
 
 **Target**
 - log(SalePrice)
