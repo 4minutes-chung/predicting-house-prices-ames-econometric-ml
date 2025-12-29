@@ -18,5 +18,6 @@ This project benchmarks linear and tree-based models on the Ames Housing dataset
 - XGBoost: CV RMSE ≈ 0.117 (stable across folds)
 
 **Notes**
-- Focus is on model comparison and regularization, not leaderboard optimization.
-- Dataset source: Kaggle House Prices (Ames).
+- Dataset source: House Prices - Advanced Regression Techniques, Kaggle.
+- It has 79 explanatory variables describing aspect of residential homes in Ames, Iowa.
+- https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/overview
