@@ -1,28 +1,35 @@
-# Housing Prices — Model Comparison
+# Housing Prices — Model Comparison (Ames, Iowa)
 
-This project benchmarks linear and tree-based models on the Ames, Iowa Housing dataset.
+## Overview
+This project benchmarks linear, regularized, and tree-based models for predicting residential house prices using the Ames Housing dataset, focused on **model comparison and evaluation**.
 
-**Target**
-- log(SalePrice)
+## Data & Target
+- Dataset: Ames, Iowa Housing Market
+- Observations: 1,460 training samples
+- Features: 79 explanatory variables 
+- Target: `log(SalePrice)`
+- Dataset source (not included due to license):  
+https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/overview
 
-**Evaluation**
-- 10-fold cross-validated RMSE (log scale)
+## Evaluation
+- Metric: **10-fold cross-validated RMSE (log scale)**
+- Mean and standard deviation across folds are reported to assess both accuracy and stability.
 
-**Models**
-- OLS, Ridge, Lasso, Elastic Net
-- Random Forest
-- Gradient Boosting
-- XGBoost
+## Models Compared
+- Linear models: OLS, Ridge, Lasso, Elastic Net
+- Tree-based models: Random Forest, Gradient Boosting, XGBoost
 
-### Key Result
-XGBoost achieved the lowest CV RMSE (≈ 0.117), reflecting the benefits
-of shrinkage, shallow trees, and subsampling.
+## Key Result
+XGBoost achieved the lowest cross-validated RMSE (≈ **0.118**), suggesting that **regularization, shallow trees, and subsampling** help reduce generalization error in high-dimensional, sparse tabular data.
 
-**Notes**
-- Dataset sourced from Kaggle, Data not included due to licensing.
-- It has 79 explanatory variables describing aspect of residential homes in Ames, Iowa.
-- https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/overview
+## Lessons Learned
+- Regularization stabilizes linear models under multicollinearity but delivers limited gains without strong feature engineering.
+- Boosting methods outperform bagging and linear models when tuned conservatively.
+- XGBoost can be interpreted as **regularized boosting**, rather than a black-box improvement.
 
-**Major Results**
-- <img width="721" height="234" alt="image" src="https://github.com/user-attachments/assets/58c96bc2-794b-4a85-8a81-b317ecb664e9" />
+## Limitations
+- No extensive feature engineering or stacking was performed.
+- Further work could include interpretability (e.g. SHAP), error analysis, and feature construction.
 
+## Results Summary
+![CV RMSE comparison](https://github.com/user-attachments/assets/58c96bc2-794b-4a85-8a81-b317ecb664e9)
