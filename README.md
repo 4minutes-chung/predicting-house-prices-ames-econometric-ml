@@ -21,3 +21,6 @@ This project benchmarks linear and tree-based models on the Ames Housing dataset
 - Dataset source: House Prices - Advanced Regression Techniques, Kaggle.
 - It has 79 explanatory variables describing aspect of residential homes in Ames, Iowa.
 - https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/overview
+
+**Major Results**
+<img width="721" height="234" alt="image" src="https://github.com/user-attachments/assets/58c96bc2-794b-4a85-8a81-b317ecb664e9" />
